@@ -1,0 +1,78 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="semana5GPaucar.Views.vPersona"  BackgroundColor="White">
+    <VerticalStackLayout>
+
+        <StackLayout BackgroundColor="LightBlue" Padding="20">
+            <Image Source="https://www.uisrael.edu.ec/wp-content/uploads/2023/01/logo-uisrael@2x-e1674848533171.png"
+             HeightRequest="40"/>
+            <Label 
+             Text="Gestion del Personal"
+             FontSize="20"
+             HorizontalTextAlignment="Center"/>
+        </StackLayout>
+
+        <Entry x:Name="txtPersona"
+               Placeholder="Ingrese un nombre" TextColor="Black"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="Auto"/>
+
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnAgregar" Text="Agregar persona" Grid.Row="0" Grid.Column="1" Clicked="btnAgregar_Clicked" BackgroundColor="LightSkyBlue" TextColor="Black"/>
+
+
+            <Label Text="                             Id Nombre" FontSize="20" TextColor="Black" Grid.Row="2" Grid.Column="0"/>
+
+            <Button x:Name="btnObtener" Text="Listar personas" Grid.Row="0" Grid.Column="3" Clicked="btnObtener_Clicked" BackgroundColor="LightSkyBlue" TextColor="Black"/>
+
+
+            <CollectionView x:Name="Listapersonas"
+                            Grid.Row="3"
+                            Grid.Column="0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="47"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Id}" Grid.Row="0" Grid.Column="2" TextColor="Black"/>
+                            <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="3" TextColor="Black"/>
+                            <Button x:Name="btnUpdate" Grid.Row="0" Grid.Column="0" Clicked="btnUpdate_Clicked" HeightRequest="10" BackgroundColor="White">
+                                <Button.ImageSource>
+                                    <FileImageSource File="editar.png" />
+
+                                </Button.ImageSource>
+                            </Button>
+
+                            <Button x:Name="btnBorrar" Grid.Row="0" Grid.Column="1" Clicked="btnBorrar_Clicked" HeightRequest="10" BackgroundColor="White">
+
+                                <Button.ImageSource>
+                                    <FileImageSource File="borrar.png" />
+
+                                </Button.ImageSource>
+                            </Button>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
