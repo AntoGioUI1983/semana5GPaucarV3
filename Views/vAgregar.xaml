@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="semana5GPaucar.Views.vAgregar"
+            BackgroundColor="White">
+    <VerticalStackLayout>
+
+        <StackLayout BackgroundColor="LightBlue" Padding="20">
+            <Image Source="https://www.uisrael.edu.ec/wp-content/uploads/2023/01/logo-uisrael@2x-e1674848533171.png"
+             HeightRequest="40"/>
+            <Label Text="Gestion del Personal"  FontSize="Medium" HorizontalTextAlignment="Center"/>
+            <Label Text="Agregar Persona"       FontSize="Subtitle" HorizontalTextAlignment="Center" TextColor="Black" />
+
+        </StackLayout>
+
+
+
+        <Entry x:Name="txtPersona" Placeholder="Ingrese Nombres" MaxLength="10" TextColor="Black" HorizontalTextAlignment="Center"/>
+
+
+        <Entry x:Name="txtApellido" Placeholder="Digite Apellidos" MaxLength="10" TextColor="Black" HorizontalTextAlignment="Center"/>
+
+        <Entry x:Name="txtCorreo" Placeholder="Digite Correo" MaxLength="10" TextColor="Black" HorizontalTextAlignment="Center"/>
+
+        <Entry x:Name="txtLabel" Placeholder="Digite Cargo" MaxLength="10" TextColor="Black" HorizontalTextAlignment="Center"/>
+
+
+
+
+        <StackLayout BackgroundColor="LightBlue" Padding="20">
+            <Button x:Name="btnGuardar" Text="Guardar"  Clicked="btnGuardar_Clicked" BackgroundColor="LightSkyBlue" TextColor="Black" WidthRequest="100"/>
+        </StackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

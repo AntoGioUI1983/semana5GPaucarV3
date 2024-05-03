@@ -12,9 +12,44 @@
              HorizontalTextAlignment="Center"/>
         </StackLayout>
 
-        <Entry x:Name="txtPersona"
-               Placeholder="Ingrese un nombre" TextColor="Black"/>
+
         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <Button x:Name="btnAgregar"  Grid.Row="1" Grid.Column="1" Clicked="btnAgregar_Clicked" BackgroundColor="White" HeightRequest="60">
+                <Button.ImageSource>
+                    <FileImageSource File="agregarpersona.png" />
+
+                </Button.ImageSource>
+            </Button>
+
+            <Button x:Name="btnObtener"  Grid.Row="1" Grid.Column="3" Clicked="btnObtener_Clicked" BackgroundColor="White" HeightRequest="90">
+                <Button.ImageSource>
+                    <FileImageSource File="listarpersonas.png" />
+
+                </Button.ImageSource>
+            </Button>
+
+
+
+            <Image Source="personas.png" HeightRequest="50" Grid.Row="1" Grid.Column="2" />
+         
+            <Label Text="               Id Nombres Apellido" FontSize="20" TextColor="Black" Grid.Row="2" Grid.Column="1"/>
+
+        </Grid>
+        
+        <Grid>                 
+                    
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -22,21 +57,13 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="500"/>
-                <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
 
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnAgregar" Text="Agregar persona" Grid.Row="0" Grid.Column="1" Clicked="btnAgregar_Clicked" BackgroundColor="LightSkyBlue" TextColor="Black"/>
-
-
-            <Label Text="                             Id Nombre" FontSize="20" TextColor="Black" Grid.Row="2" Grid.Column="0"/>
-
-            <Button x:Name="btnObtener" Text="Listar personas" Grid.Row="0" Grid.Column="3" Clicked="btnObtener_Clicked" BackgroundColor="LightSkyBlue" TextColor="Black"/>
-
-
-            <CollectionView x:Name="Listapersonas"
+             <CollectionView x:Name="Listapersonas"
                             Grid.Row="3"
                             Grid.Column="0">
                 <CollectionView.ItemTemplate>

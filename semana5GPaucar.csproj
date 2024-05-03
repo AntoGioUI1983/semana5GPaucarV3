@@ -49,8 +49,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\agregarpersona.PNG" />
 	  <None Remove="Resources\Images\borrar.png" />
 	  <None Remove="Resources\Images\editar.PNG" />
+	  <None Remove="Resources\Images\listarpersonas.PNG" />
+	  <None Remove="Resources\Images\personas.PNG" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -62,6 +65,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\vAgregar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\vEditar.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -8,15 +8,11 @@ public partial class vPersona : ContentPage
         InitializeComponent();
     }
 
-    private async void btnAgregar_Clicked(object sender, EventArgs e)
+    private  void btnAgregar_Clicked(object sender, EventArgs e)
     {
-        // Elimina estas líneas
-        // lblStatus.Text = "";
-        // lblStatus.Text = App.PersonRepo.statusMessage;
 
-        App.PersonRepo.AddNewPerson(txtPersona.Text);
-        // Muestra una alerta con el mensaje de estado
-        await DisplayAlert("Información", App.PersonRepo.statusMessage, "Aceptar");
+        Navigation.PushAsync(new Views.vAgregar());
+        
     }
 
     private void btnObtener_Clicked(object sender, EventArgs e)
