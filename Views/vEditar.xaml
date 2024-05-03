@@ -15,41 +15,24 @@
        
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="200" />
             </Grid.ColumnDefinitions>
 
-            <Label 
-              Grid.Row="0" Grid.Column="0"
-              Text="id"              
-               TextColor="Black"/>
+            <Label  Grid.Row="0" Grid.Column="1" Text="Id:" TextColor="Black" FontSize="Micro"/>
+            <Label  Grid.Row="0" Grid.Column="2" x:Name="lblId"  Text="" TextColor="Black"/>
 
+            <Label  Grid.Row="1" Grid.Column="1" Text="Nombre :"  TextColor="Black" FontSize="Micro"/>
+            <Entry  Grid.Row="1" Grid.Column="2"  x:Name="txtNombre" Text="" TextColor="Black" />
 
-            <Label 
-             Grid.Row="0" Grid.Column="1"
-             x:Name="lblId"
-             Text=""
-             VerticalOptions="Center" 
-              TextColor="Black"/>
-
-            <Label
-                 Grid.Row="1" Grid.Column="0"
-                 Text="Nombre"             
-                 TextColor="Black"/>
-
-            <Entry                 
-             Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
-             x:Name="txtNombre"
-             Text=""            
-            TextColor="Black"/>
-
-            <Button 
-              Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+            <Button  BackgroundColor="SkyBlue"
+              Grid.Row="3" Grid.Column="1" 
                x:Name="btnGuardar" Text="Guardar"
              Clicked="btnGuardar_Clicked"      
                Margin="0,20,0,0" />
